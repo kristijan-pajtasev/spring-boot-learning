@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.models.Person;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -17,6 +18,10 @@ public class PersonController {
         List<Person> people = new ArrayList<>();
         people.add(new Person(1, "John", "Doe", new Date()));
         return people;
-//        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
+
+    @GetMapping("/person/{id}")
+    public Person person(@PathVariable("id") int id) {
+        return new Person(id, "John", "Doe", new Date());
     }
 }

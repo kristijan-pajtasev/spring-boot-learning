@@ -15,7 +15,7 @@ public class PersonController {
     @GetMapping("/person")
     public List<Person> person() {
         List<Person> people = new ArrayList<>();
-        people.add(new Person("John", "Doe", new Date()));
+        people.add(new Person(1, "John", "Doe", new Date()));
         return people;
 //        return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }

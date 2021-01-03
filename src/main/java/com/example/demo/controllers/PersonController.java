@@ -17,6 +17,7 @@ public class PersonController {
 
     {
         people.add(new Person(1, "John", "Doe", new Date()));
+        people.add(new Person(2, "John 2", "Doe 2", new Date()));
     }
 
     @GetMapping("/person")
